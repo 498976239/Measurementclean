@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.measurement.www.measurement.QueryActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mQuerytoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:theme = "@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="通道数"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#bfbfbf"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="数据一"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#bfbfbf"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="数据二"
+            android:gravity="center"
+            android:layout_weight="1" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#bfbfbf"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="数据三"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#bfbfbf"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="日期"
+            android:gravity="center"
+            android:layout_weight="2"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bfbfbf"/>
+
+    <ListView
+        android:id="@+id/mList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    <TableLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TableRow>
+            <Button
+                android:id="@+id/choose_name"
+                android:text="选择通道"
+                android:layout_marginLeft="5dp"/>
+            <Button
+                android:id="@+id/choose_start_time"
+                android:text="起点日期"
+                android:layout_marginLeft="5dp"/>
+            <Button
+                android:id="@+id/choose_end_time"
+                android:text="终点日期"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/query_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:text="查询"/>
+
+
+</LinearLayout>
